@@ -105,9 +105,9 @@ class TelegramUploader:
                 else ""
             )
             msg = f"""➲ <b><u>Leech Started :</u></b>
-┃
-┠ <b>User :</b> {self._listener.user.mention} ( #ID{self._listener.user_id} ){"\n┠ <b>Message Link :</b> <a href='{msg_link}'>Click Here</a>" if msg_link else ""}
-┖ <b>Source :</b> <a href='{self._listener.source_url}'>Click Here</a>"""
+
+•<b>User :</b> {self._listener.user.mention} ( #ID{self._listener.user_id} ){"\n•<b>Message Link :</b> <a href='{msg_link}'>Click Here</a>" if msg_link else ""}
+•<b>Source :</b> <a href='{self._listener.source_url}'>Click Here</a>"""
             try:
                 if self._user_session:
                     self._sent_msg = await TgClient.user.send_message(
