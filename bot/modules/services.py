@@ -30,8 +30,8 @@ from ..helper.telegram_helper.message_utils import (
 async def start(_, message):
     userid = message.from_user.id
     buttons = ButtonMaker()
-    buttons.url_button("Git Repo", "https://www.github.com/SilentDemonSD/WZML-X")
-    buttons.url_button("Updates", "https://t.me/WZML_X")
+    buttons.url_button("Updates", "https://t,me/FondnessBots")
+    buttons.url_button("Master", "https://t.me/BalaPriyan")
     reply_markup = buttons.build_menu(2)
 
     if len(message.command) > 1 and message.command[1] == "wzmlx":
@@ -67,11 +67,11 @@ async def start(_, message):
             )
             reply_markup = buttons.build_menu(2)
             msg = f"""⌬ Access Login Token : 
-    │
-    ┟ <b>Status</b> → <code>Generated Successfully</code>
-    ┟ <b>Access Token</b> → <code>{input_token}</code>
+    
+    •<b>Status</b> : <code>Generated Successfully</code>
+    •<b>Access Token</b> : <code>{input_token}</code>
     ┃
-    ┖ <b>Validity:</b> {get_readable_time(int(Config.VERIFY_TIMEOUT))}"""
+    •<b>Validity:</b> {get_readable_time(int(Config.VERIFY_TIMEOUT))}"""
             return await send_message(message, msg, reply_markup)
 
     if await CustomFilters.authorized(_, message):
