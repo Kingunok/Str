@@ -70,7 +70,7 @@ async def start(_, message):
     
     •<b>Status</b> : <code>Generated Successfully</code>
     •<b>Access Token</b> : <code>{input_token}</code>
-    ┃
+    
     •<b>Validity:</b> {get_readable_time(int(Config.VERIFY_TIMEOUT))}"""
             return await send_message(message, msg, reply_markup)
 
