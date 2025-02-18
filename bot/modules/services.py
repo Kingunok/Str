@@ -30,7 +30,7 @@ from ..helper.telegram_helper.message_utils import (
 async def start(_, message):
     userid = message.from_user.id
     buttons = ButtonMaker()
-    buttons.url_button("Updates", "https://t,me/FondnessBots")
+    buttons.url_button("Updates", "https://t.me/FondnessBots")
     buttons.url_button("Master", "https://t.me/BalaPriyan")
     reply_markup = buttons.build_menu(2)
 
